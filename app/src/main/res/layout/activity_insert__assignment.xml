@@ -27,32 +27,32 @@
         android:layout_below="@+id/assign_spin"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="48dp"
-        android:id="@+id/editText"
+        android:id="@+id/gradeE"
         android:textAlignment="center"
-        android:text="Points Received" />
+        tools:text="Points Received" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:layout_below="@+id/editText"
-        android:layout_alignLeft="@+id/editText"
-        android:layout_alignStart="@+id/editText"
+        android:layout_below="@+id/gradeE"
+        android:layout_alignLeft="@+id/gradeE"
+        android:layout_alignStart="@+id/gradeE"
         android:layout_marginTop="56dp"
-        android:id="@+id/editText2"
+        android:id="@+id/totalE"
         android:textAlignment="center"
-        android:text="Total Points" />
+        tools:text="Total Points" />
 
     <Button
         android:text="Add Grade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_alignStart="@+id/editText2"
+        android:layout_below="@+id/totalE"
+        android:layout_alignLeft="@+id/totalE"
+        android:layout_alignStart="@+id/totalE"
         android:layout_marginTop="59dp"
         android:id="@+id/button"
-        android:layout_alignRight="@+id/editText2"
-        android:layout_alignEnd="@+id/editText2" />
+        android:layout_alignRight="@+id/totalE"
+        android:layout_alignEnd="@+id/totalE" />
 </RelativeLayout>
