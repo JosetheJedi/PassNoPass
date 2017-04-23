@@ -10,10 +10,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     // holds all the classes
     ArrayList<String> classes;
     ArrayAdapter<String> adapter;
-
+    DatabaseHelper db;
 
 
     @Override
@@ -31,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        db = new DatabaseHelper(this);
+
         list = (ListView)  findViewById(R.id.list);
 
         classes = new ArrayList<>();
@@ -39,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
         list.setAdapter(adapter);
 
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +52,19 @@ public class MainActivity extends AppCompatActivity {
                 Inserting();
             }
         });
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+
+                Intent i = new Intent(view.getContext(), Class_Info.class);
+                i.putExtra("listItem", classes.get(position));
+                startActivity(i);
+
+            }
+        });
+
+
     }
 
     public void Inserting(){
@@ -57,7 +76,18 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == 1) {
             if (resultCode == RESULT_OK) {
                 String string = data.getStringExtra("RESULT_STRING");
-                classes.add(string);
+                int classNum = data.getIntExtra("Num", 0);
+                String id = string + classNum;
+
+                db.addCourse(new Course(id, string, classNum));
+
+                List<Course> courses = db.getAllCourses();
+
+                for(Course c: courses){
+                    String classes = c.getCourseID();
+                    this.classes.add(classes);
+                }
+
                 adapter.notifyDataSetChanged();
             }
         }

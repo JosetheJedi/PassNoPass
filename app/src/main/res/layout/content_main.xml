@@ -14,6 +14,13 @@
     tools:context="com.example.josef.passnopass.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <TextView
+        android:text="Classes"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/Class_label" />
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
