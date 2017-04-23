@@ -17,11 +17,13 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView list = (ListView)  findViewById(R.id.list);
+    ListView list;
 
     // holds all the classes
-    ArrayList<String> classes = new ArrayList<>();
-    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, classes);
+    ArrayList<String> classes;
+    ArrayAdapter<String> adapter;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        list = (ListView)  findViewById(R.id.list);
+
+        classes = new ArrayList<>();
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, classes);
+
 
         list.setAdapter(adapter);
 
@@ -43,8 +50,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void Inserting(){
         Intent insertClass = new Intent(this, Insert_class.class);
-        insertClass.putStringArrayListExtra("class", classes);
-        startActivity(insertClass);
+        startActivityForResult(insertClass, 1);
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1) {
+            if (resultCode == RESULT_OK) {
+                String string = data.getStringExtra("RESULT_STRING");
+                classes.add(string);
+                adapter.notifyDataSetChanged();
+            }
+        }
     }
 
     @Override
@@ -68,4 +84,5 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }

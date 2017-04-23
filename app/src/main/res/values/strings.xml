@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">Pass No Pass</string>
     <string name="action_settings">Settings</string>
+
+    <string name="assignment_prompt">Choose assignment type</string>
+
+    <string-array name="assignment_arrays">
+        <item>Homework</item>
+        <item>Quiz</item>
+        <item>Lab</item>
+        <item>Exam</item>
+        <item>Lab Exam</item>
+        <item>Lab Quiz</item>
+    </string-array>
 </resources>

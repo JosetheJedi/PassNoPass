@@ -18,7 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Insert_class"></activity>
+        <activity android:name=".Insert_class" />
+        <activity android:name=".Class_Info" />
+        <activity android:name=".Insert_Assignment"></activity>
     </application>
 
 </manifest>
