@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "501093623483",
+    "firebase_url": "https://beachhack-gpacalculator.firebaseio.com",
+    "project_id": "beachhack-gpacalculator",
+    "storage_bucket": "beachhack-gpacalculator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501093623483:android:807a0ccb754fe797",
+        "android_client_info": {
+          "package_name": "com.awesomeGPACal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501093623483-783g4vqotsm4qr64vo279u9m8tqgsmqh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBui2QO_jNjCd3FN7cpDQycaTwEO_WXsmM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
