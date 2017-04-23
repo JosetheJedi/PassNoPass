@@ -36,6 +36,50 @@
           "status": 2
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501093623483:android:9f2a2b99050dfa0f",
+        "android_client_info": {
+          "package_name": "com.example.josef.passnopass"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501093623483-i2lssh7ivut1ns1k4cbmjt7ggp1s2n9h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.josef.passnopass",
+            "certificate_hash": "aeab6de5fdbaac9e7249873a4d52c151a531c1b5"
+          }
+        },
+        {
+          "client_id": "501093623483-783g4vqotsm4qr64vo279u9m8tqgsmqh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBui2QO_jNjCd3FN7cpDQycaTwEO_WXsmM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501093623483-783g4vqotsm4qr64vo279u9m8tqgsmqh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
     }
   ],
   "configuration_version": "1"
