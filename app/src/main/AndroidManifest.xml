@@ -24,8 +24,9 @@
         <activity android:name=".Class_Info" />
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".ResetPasswordActivity"></activity>
-
+        <activity android:name=".MainFirebaseActivity"></activity>
         <activity android:name=".Insert_Assignment"></activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
 
 </manifest>

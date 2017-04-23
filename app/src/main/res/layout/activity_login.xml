@@ -25,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="Enter Your Email"
+                android:hint="@string/hint_email"
                 android:inputType="textEmailAddress"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white" />
@@ -40,7 +40,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="Enter Your Password"
+                android:hint="@string/hint_password"
                 android:inputType="textPassword"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/white" />
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
             android:background="@color/colorAccent"
-            android:text="Login"
+            android:text="@string/btn_login"
             android:textColor="@android:color/black" />
 
         <Button
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
             android:background="@null"
-            android:text="Forgot Your Password?"
+            android:text="@string/btn_forgot_password"
             android:textAllCaps="false"
             android:textColor="@color/colorAccent" />
 
@@ -75,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
             android:background="@null"
-            android:text="Not yet registered? Register Here"
+            android:text="@string/btn_link_to_register"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="15dp" />
